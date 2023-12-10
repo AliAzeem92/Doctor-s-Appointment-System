@@ -1,27 +1,395 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: lightblue;
+  color: white;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.logo {
+  order: 1;
 }
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+footer {
+  background-color: lightblue;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* Pushes the footer to the bottom of the viewport */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo,
+.footer-services,
+.footer-hours,
+.footer-services-info,
+.footer-social-icons,
+.footer-copyright {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-social-icons a {
+  margin: 0 10px;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+
+
+/* Under Home Navbar */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightblue; /* Light blue background color */
+}
+
+.dual-container {
+  display: flex;
+  width: 100%;
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background-color: lightblue; /* White background color for the text container */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue; /* White background color for the image container */
+}
+
+.image-container img {
+  width: 70%;
+  max-width: 100%; /* Make sure the image doesn't exceed its container */
+  height: auto;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.appointment-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.undernav-h1 {
+  color: #007bff; /* Blue text color for the heading */
+}
+.undernav-p {
+  color: white;
+}
+
+/* About Us */
+
+/* styles/globals.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e0f7fa; /* Light blue background color */
+}
+
+.about-us-layout {
+  text-align: center;
+}
+
+.about-us-heading {
+  font-size: 2em; /* Double the size of h1 tag */
+  color: #007bff; /* Blue color for the heading */
+}
+
+.container {
+  display: flex;
+}
+
+.image-container {
+  flex: 30%;
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  flex: 70%;
+  text-align: left;
+}
+
+
+
+/* Services */
+
+
+/* styles.module.css */
+.services-layout {
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 2em;
+  color: #007bff;
+}
+
+.sub-heading {
+  margin-top: 10px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+}
+
+.card {
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding: 10px;
+  text-align: left;
+}
+
+.info p {
+  margin: 0;
+}
+
+.appointment-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/* Contact */
+/* styles.module.css */
+.contact-layout {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-heading {
+  font-size: 4em; /* Double the size of h1 tag */
+  color: #007bff; /* Blue color for the heading */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-container,
+.query-container {
+  width: 45%; /* Each container takes 45% of the screen */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.send-button {
+  background-color: #001f3f; /* Dark blue color for the button */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.query-container h2 {
+  font-size: 2em;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-item span {
+  margin-right: 10px;
+}
+
+
+/* Appointment */
+
+/* styles/appointmentStyles.module.css */
+.appointment-layout {
+  text-align: center;
+  padding: 20px;
+}
+
+.appointment-heading {
+  font-size: 2em;
+  color: #007bff;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.left-container {
+  width: 30%;
+}
+
+.left-container img {
+  width: 100%; /* Set the image to take up 100% of its container width */
+  height: auto;
+}
+
+.right-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+.specialization {
+  font-weight: bold;
+}
+
+.day-heading,
+.timing-heading {
+  margin-top: 10px;
+}
+
+.day-heading h4,
+.timing-heading {
+  margin-bottom: 5px;
+}
+
+.timing-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center; /* Center the buttons horizontally */
+}
+
+.confirm-button {
+  background-color: #001f3f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+
+/* Congratulations */
+
+/* styles/congratulationsStyles.module.css */
+.congratulations-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.big-heading {
+  font-size: 200%;
+  color: #007bff;
+}
+
+.big-heading img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+
+/* Log In */
